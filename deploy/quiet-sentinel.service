@@ -1,0 +1,11 @@
+[Unit]
+Description=Quiet Sentinel dashboard
+After=network.target
+[Service]
+WorkingDirectory=%h/quiet-sentinel/quiet-sentinel
+EnvironmentFile=-%h/.config/quiet-sentinel/ai.env
+ExecStart=/usr/bin/python3 -m quiet_sentinel --ai --provider ollama --model qwen2.5:14b-instruct --ollama-url http://127.0.0.1:11435
+Restart=always
+RestartSec=5
+[Install]
+WantedBy=default.target

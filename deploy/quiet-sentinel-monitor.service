@@ -1,0 +1,11 @@
+[Unit]
+Description=Quiet Sentinel Linux metric collector
+After=quiet-sentinel.service
+Wants=quiet-sentinel.service
+[Service]
+WorkingDirectory=%h/quiet-sentinel/quiet-sentinel
+ExecStart=/usr/bin/python3 -u monitor.py
+Restart=always
+RestartSec=5
+[Install]
+WantedBy=default.target
