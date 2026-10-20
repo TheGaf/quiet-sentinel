@@ -1,5 +1,5 @@
 ---
-title: Quiet Sentinel: let the server watch itself, quietly
+title: "Quiet Sentinel: let the server watch itself, quietly"
 published: false
 tags: devchallenge, hf26challenge, opensource, productivity
 ---
